@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" href="images/tux.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <script src="https://kit.fontawesome.com/4a7ac4c868.js" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo"  >
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Professional Gamer</p>
+            <h1>Hello, I'm <span>Abdul</span> Wassid</h1>
+        </div>
+    </div>
+</div>
+
+<!--------- About me -------->
+<div id="about">
+    <div class="container">
+        <div class="row">   
+            <div class="about-col-1">
+                <img src="/images/lol.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Welcome I am Abdul Wassid. I'm currently working toward a degree in computer science with the goal to become a software engineer. I'm Muslim and an American of Bangladeshi descent. I enjoy watching movies, tv-shows, anime, playing video games, building Gunpla, speed cubing, collecting Pokémon cards, weight lifting, and I participate in MMA.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links "onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programing Languages</span><br>Python<br>HTML<br>CSS<br>Javascript</li>
+                        <li><span>Interpersonal Abilities</span><br>Adaptable<br>Teamwork<br>Conflict management<br>Communication<br>Diligent</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-Current</span><br>Home Depot<br>Position: Cashier
+                        <li><span>June 2022-July 2022</span></li>Piper Fire Protection<br> Position: Pre Aprentice
+                        <li><span>June 2021-November 2022</span></li>McDonalds<br> Position: Crew Worker
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-Current</span><br>St. Petersburg College<br>Major: Computer Science
+                        <li><span>2019-2023</span><br>St. Petersburg High School
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<!--------- Projects -------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <br></br>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-download"></i>
+                <h2>Projects</h2>
+                <p>Pong Game.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Snake%20Game.py" target="_blank">Project 1</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-download"></i>
+                <h2>Projects</h2>
+                <p>Rock, Paper, Scissors.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Rock%20Paper%20Scissors%20Game.py" target="_blank">Project 2</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-download"></i>
+                <h2>Projects</h2>
+                <p> Trivia Quiz Game.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Quiz%20Game.py" target="_blank">Project 3</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-square-github"></i>
+                <h2>Github</h2>
+                <p>Github repositories.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol" target="_blank">Github</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+<!--------- Contact -------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> pethebe1016@gmail.com</p>
+                <p> <i class="fa-solid fa-square-phone"></i> (727) 259-5383</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/itsabduldude/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://twitter.com/Blazeman1016" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/abdul-wassid-157987215/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://discord.gg/8rHmjePAAG" target="_blank"><i class="fa-brands fa-discord"></i></a> 
+                    <a href="https://www.tiktok.com/@itsabduldude" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <a href="/images/my-cv.pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required> 
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <div class="copyright">
+        <p>Copyright © Abdul.</p>
+    </div>
+</div>
+    
+        
+                
+           
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");  
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOxuvNzqJBRB2m_lmqwwoAF1JQc3MWCX8OsZEqr_gmEyvo3GETLdOR_Vm66HCepOVjQw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Your message has been sent sucsessfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-150px";
+    }
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+       if(disclaimer){
+           disclaimer.remove();
+       }
+     });
+    </script>
+</body>
+</html>
