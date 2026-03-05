@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="images/woah.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
+    <link rel="icon" href="images/woah.png">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4a7ac4c868.js" crossorigin="anonymous"></script>
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
 
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo"  >
+            <img src="images/logo.png" class="logo">
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -22,17 +21,21 @@
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+            <div class="nav-icons">
+                <div class="theme-switch" onclick="toggleTheme()">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </div>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </div>
         </nav>
         <div class="header-text">
-            <p>Aspring Student in Computer Science</p>
+            <p>Aspiring Student in Computer Science</p>
             <h1>Hello, I'm <span>Abdul</span> Wassid</h1>
         </div>
     </div>
 </div>
 
-<!--------- About me -------->
-<div id="about">
+<div id="about" class="reveal">
     <div class="container">
         <div class="row">   
             <div class="about-col-1">
@@ -40,92 +43,81 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Welcome I am Abdul Wassid. I'm currently working toward a degree in computer science with the goal to become a software engineer. I'm Muslim and an American of Bangladeshi descent. I enjoy watching movies, tv-shows, anime, playing video games, building Gunpla, speed cubing, collecting Pokémon cards, weight lifting, and I participate in MMA.</p>
+                <p>Hi, I’m Abdul Wassid. I’m a Computer Science student and aspiring Software Engineer focused on building impactful technology. When I’m not coding, I stay active through weight lifting and BJJ. I also really enjoy technical and creative hobbies, whether I'm building Gunpla, speed cubing, or diving into a new video game. I have a deep appreciation for storytelling and collecting too, which keeps me constantly hunting for the next great sci-fi novel, manga, or Pokémon card to add to my collection.</p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links "onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Programing Languages</span><br>Python<br>Java<br>HTML<br>CSS<br>Javascript</li>
-                        <li><span>Interpersonal Abilities</span><br>Adaptable<br>Teamwork<br>Conflict management<br>Communication<br>Diligent</li>
+                        <li><span>Core skills</span><br>Python<br>Java<br>HTML<br>CSS<br>Javascript</li>
+                        <li><span>Soft Skills</span><br>Adaptable<br>Teamwork<br>Conflict management<br>Communication<br>Diligent</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>2023-Current</span><br>Home Depot<br>Position: Cashier
-                        <li><span>June 2022-July 2022</span></li>Piper Fire Protection<br> Position: Pre Aprentice
-                        <li><span>June 2021-November 2022</span></li>McDonalds<br> Position: Crew Worker
+                        <li><span>Feb 2026 - Current</span><br>Shell Rally - Cashier</li>
+                        <li><span>Nov 2025 - Jan 2026</span><br>Best Buy - Retail Sales Associate </li>
+                        <li><span>Feb 2023 - Nov 2025</span><br>Home Depot - Cashier</li>
+                        <li><span> June 2021 - July 2022</span><br>Piper Fire Protection - Pre Apprentice</li>
+                        <li><span>June 2021 - Nov 2022</span><br>McDonalds - Crew Worker</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>2023-Current</span><br>St. Petersburg College<br>Major: Computer Science
-                        <li><span>2019-2023</span><br>St. Petersburg High School
+                        <li><span>2023 - Current</span><br>St. Petersburg College<br>Major: Computer Science</li>
+                        <li><span>2019 - 2023</span><br>St. Petersburg High School</li>
                     </ul>
                 </div>
             </div> 
         </div>
     </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<!--------- Projects -------->
-<div id="projects">
+
+<div id="projects" class="reveal">
     <div class="container">
         <h1 class="sub-title">Projects</h1>
-        <br></br>
         <div class="projects-list">
-            <div>
-                <i class="fa-solid fa-download"></i>
-                <h2>Projects</h2>
-                <p>Pong Game.</p>
-                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Snake%20Game.py" target="_blank">Project 1</a>
+            <div class="project-card">
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Pong Game</h2>
+                <p>A classic rendition of the Pong game developed in Python.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Snake%20Game.py" target="_blank">View Project</a>
             </div>
-            <div>
-                <i class="fa-solid fa-download"></i>
-                <h2>Projects</h2>
-                <p>Rock, Paper, Scissors.</p>
-                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Rock%20Paper%20Scissors%20Game.py" target="_blank">Project 2</a>
+            <div class="project-card">
+                <i class="fa-solid fa-hand-fist"></i>
+                <h2>Rock Paper Scissors</h2>
+                <p>Interactive game logic built to test basic conditional programming.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Rock%20Paper%20Scissors%20Game.py" target="_blank">View Project</a>
             </div>
-            <div>
-                <i class="fa-solid fa-download"></i>
-                <h2>Projects</h2>
-                <p> Trivia Quiz Game.</p>
-                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Quiz%20Game.py" target="_blank">Project 3</a>
+            <div class="project-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h2>Trivia Quiz</h2>
+                <p>A multi-choice quiz application designed for knowledge testing.</p>
+                <a href="https://github.com/xMysticBlaze/Projects-lol/blob/main/Quiz%20Game.py" target="_blank">View Project</a>
             </div>
-            <div>
-                <i class="fa-brands fa-square-github"></i>
-                <h2>Projects</h2>
-                <p>King Kong vs Godzilla.</p>
-                <a href="https://github.com/AbdulWassid/Python-Projects-lol/blob/main/KingKongVsGodzilla.zip" target="_blank">Project 4</a>
+            <div class="project-card">
+                <i class="fa-solid fa-dragon"></i>
+                <h2>kaiju Battle</h2>
+                <p>A specialized project utilizing Python assets and logic.</p>
+                <a href="https://github.com/AbdulWassid/Python-Projects-lol/blob/main/KingKongVsGodzilla.zip" target="_blank">View Project</a>
             </div>
-
         </div>
     </div>
 </div>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
 
-
-<!--------- Contact -------->
-
-<div id="contact">
+<div id="contact" class="reveal">
     <div class="container">
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> pethebe1016@gmail.com</p>
-                <p> <i class="fa-solid fa-square-phone"></i> (727) 259-5383</p>
+                <p><i class="fa-solid fa-paper-plane"></i> abdulwassid1016@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> (727) 259-5383</p>
                 <div class="social-icons">
-                    <a href="https://github.com/AbdulWassid" target="_blank"><i class="fa-brands fa-square-github"></i></a>
                     <a href="https://www.linkedin.com/in/abdul-wassid-157987215/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/AbdulWassid" target="_blank"><i class="fa-brands fa-square-github"></i></a>
                 </div>
                 <a href="/images/Resume.pdf" download class="btn">Download Resume</a>
             </div>
@@ -140,21 +132,13 @@
             </div>
         </div>
     </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
     <div class="copyright">
         <p>Copyright © Abdul.</p>
     </div>
 </div>
-    
-        
-                
-           
 
 <script>
-
+    // Tab switching logic
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -169,45 +153,55 @@
         document.getElementById(tabname).classList.add("active-tab");  
     }
 
-</script>
-<script>
+    // Side menu logic
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){ sidemenu.style.right = "0"; }
+    function closemenu(){ sidemenu.style.right = "-150px"; }
+
+    // Theme Toggle logic
+    function toggleTheme() {
+        const body = document.body;
+        const icon = document.getElementById('theme-icon');
+        body.classList.toggle('light-mode');
+        
+        if(body.classList.contains('light-mode')){
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+        }
+    }
+
+    // Scroll Reveal logic
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 100;
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            }
+        }
+    }
+    // Run reveal once on load
+    reveal();
+
+    // Contact form logic
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzOxuvNzqJBRB2m_lmqwwoAF1JQc3MWCX8OsZEqr_gmEyvo3GETLdOR_Vm66HCepOVjQw/exec'
     const form = document.forms['submit-to-google-sheet']
-    const msg=document.getElementById("msg")
+    const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML = "Your message has been sent sucsessfully!"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
+            msg.innerHTML = "Your message has been sent successfully!"
+            setTimeout(function(){ msg.innerHTML = "" }, 5000)
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
     })
 </script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-150px";
-    }
-
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-      var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
-       if(disclaimer){
-           disclaimer.remove();
-       }
-     });
-    </script>
 </body>
 </html>
